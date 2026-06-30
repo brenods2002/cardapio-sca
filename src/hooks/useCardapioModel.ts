@@ -9,12 +9,12 @@ interface ProdutoSelecionado extends Produtos {
 export function useCardapioModal() {
   const [produtoModal, setProdutoModal] = useState<Produtos | null>(null);
   const [quantidade, setQuantidade] = useState(1);
-  const [observacao, setObersvvacao] = useState("");
+  const [observacao, setObservacao] = useState("");
 
   function handleClickSelect(produto: Produtos) {
     setProdutoModal(produto);
     setQuantidade(1);
-    setObersvvacao("");
+    setObservacao("");
   }
   function fecharModal() {
     setProdutoModal(null);
@@ -43,7 +43,7 @@ export function useCardapioModal() {
     produtoModal,
     quantidade,
     observacao,
-    setObersvvacao,
+    setObservacao,
     handleClickSelect,
     fecharModal,
     incrementar,

@@ -12,8 +12,26 @@ import { formatarPreco } from "@/utils/formatPrice";
 import { Badge } from "../ui/badge";
 import { categorias } from "@/types/type";
 import type { Categorias } from "@/types/type";
+import { useCardapioModal } from "@/hooks/useCardapioModel";
+import { ModalItemCardapio } from "../ModalItemCardapio";
 
 export function MenuItems() {
+  const {
+    produtoModal,
+    quantidade,
+    observacao,
+    setObservacao,
+    handleClickSelect,
+    fecharModal,
+    incrementar,
+    decrementar,
+    confirmarSelecao,
+  } = useCardapioModal();
+
+  function adicionarAoCarrinho() {
+    console.log("Adicionado ao carrinho", produtos);
+  }
+
   const [categoriaSelecionada, setCategoriaSelecionada] =
     useState<Categorias>("Todos");
 
@@ -59,10 +77,25 @@ export function MenuItems() {
               <Badge className="text-md font-bold" variant="ghost">
                 {formatarPreco(produto.preco)}
               </Badge>
-              <Button variant="outline">Selecionar</Button>
+              <Button
+                onClick={() => handleClickSelect(produto)}
+                variant="outline"
+              >
+                Selecionar
+              </Button>
             </CardContent>
           </Card>
         ))}
+        <ModalItemCardapio
+          produto={produtoModal}
+          quantidade={quantidade}
+          observacao={observacao}
+          onIncrementar={incrementar}
+          onDecrementar={decrementar}
+          onObservacaoChange={setObservacao}
+          onFechar={fecharModal}
+          onConfirmar={() => confirmarSelecao(adicionarAoCarrinho)}
+        />
       </div>
     </div>
   );
