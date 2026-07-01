@@ -10,8 +10,8 @@ import {
 } from "../ui/card";
 import { formatarPreco } from "@/utils/formatPrice";
 import { Badge } from "../ui/badge";
-import { categorias } from "@/types/type";
-import type { Categorias, ProdutoSelecionado } from "@/types/type";
+import { categorias } from "@/types";
+import type { Categorias, ProdutoSelecionado } from "@/types";
 import { useCardapioModal } from "@/hooks/useCardapioModel";
 import { ModalItemCardapio } from "../ModalItemCardapio";
 
@@ -49,7 +49,7 @@ export function MenuItems({ adicionarPedido }: MenuItemProps) {
         {categorias.map((categoria) => (
           <Button
             key={categoria}
-            className={`p-4.5 ${categoriaSelecionada === categoria ? "bg-ring text-white scale-[1.05]" : "bg-primary hover:bg-primary/90"}`}
+            className={`p-4.5 ${categoriaSelecionada === categoria ? "bg-primary/70 text-white scale-[1.05]" : "bg-primary hover:bg-primary/90"}`}
             onClick={() => setCategoriaSelecionada(categoria)}
           >
             {categoria}

@@ -1,4 +1,4 @@
-import type { Produtos, ProdutoSelecionado } from "@/types/type";
+import type { Produtos, ProdutoSelecionado } from "@/types";
 import { useState } from "react";
 
 export function useCardapioModal() {

@@ -1,4 +1,4 @@
-import type { Produtos } from "@/types/type";
+import type { Produtos } from "@/types";
 import { formatarPreco } from "@/utils/formatPrice";
 import { Badge } from "../ui/badge";
 import {

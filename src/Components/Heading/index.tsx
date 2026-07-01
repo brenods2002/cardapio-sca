@@ -1,16 +1,25 @@
 import { ShoppingCart, UtensilsCrossed } from "lucide-react";
 import { Button } from "../ui/button";
-import type { ProdutoSelecionado } from "@/types/type";
+import type { ProdutoSelecionado } from "@/types";
 import { useState } from "react";
 import { Badge } from "../ui/badge";
+import { ModalCarrinho } from "../ModalCarrinho";
 
 interface HeaderProps {
   totalPedido: number;
   totalPreco: number;
   produto: ProdutoSelecionado[];
+  onRemover: (id: number, observacao: string) => void;
+  onLimpar: () => void;
 }
 
-export function Header({ totalPedido, totalPreco, produto }: HeaderProps) {
+export function Header({
+  totalPedido,
+  totalPreco,
+  produto,
+  onRemover,
+  onLimpar,
+}: HeaderProps) {
   const [modalCarrinhoAberto, setmMdalCarrinhoAberto] = useState(false);
 
   return (
@@ -33,6 +42,14 @@ export function Header({ totalPedido, totalPreco, produto }: HeaderProps) {
           {totalPedido}
         </Badge>
       </Button>
+      <ModalCarrinho
+        open={modalCarrinhoAberto}
+        onFechar={() => setmMdalCarrinhoAberto(false)}
+        produtos={produto}
+        totalPreco={totalPreco}
+        onRemover={onRemover}
+        onLimpar={onLimpar}
+      />
     </header>
   );
 }

@@ -4,7 +4,14 @@ import { MenuItems } from "./Components/Menu";
 import { usePedido } from "./hooks/usePedido";
 
 function App() {
-  const { pedido, adicionarPedido, totalPedido, totalPreco } = usePedido();
+  const {
+    pedido,
+    adicionarPedido,
+    totalPedido,
+    totalPreco,
+    removerPedido,
+    limparPedido,
+  } = usePedido();
 
   return (
     <>
@@ -12,6 +19,8 @@ function App() {
         totalPreco={totalPreco}
         totalPedido={totalPedido}
         produto={pedido}
+        onRemover={removerPedido}
+        onLimpar={limparPedido}
       />
       <HeroSection />
       <MenuItems adicionarPedido={adicionarPedido} />

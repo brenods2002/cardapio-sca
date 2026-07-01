@@ -1,5 +1,5 @@
 // hooks/usePedido.ts
-import type { ProdutoSelecionado } from "@/types/type";
+import type { ProdutoSelecionado } from "@/types";
 import { useState } from "react";
 
 export function usePedido() {
@@ -23,8 +23,10 @@ export function usePedido() {
     });
   }
 
-  function removerPedido(id: number) {
-    setPedido((prev) => prev.filter((i) => i.id !== id));
+  function removerPedido(id: number, observacao: string) {
+    setPedido((prev) =>
+      prev.filter((i) => !(i.id === id && i.observacao === observacao)),
+    );
   }
 
   function limparPedido() {
