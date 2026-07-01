@@ -1,10 +1,5 @@
-import type { Produtos } from "@/types/type";
+import type { Produtos, ProdutoSelecionado } from "@/types/type";
 import { useState } from "react";
-
-interface ProdutoSelecionado extends Produtos {
-  quantidade: number;
-  observacao: string;
-}
 
 export function useCardapioModal() {
   const [produtoModal, setProdutoModal] = useState<Produtos | null>(null);

@@ -1,11 +1,4 @@
 import type { Produtos } from "@/types/type";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "../ui/card";
 import { formatarPreco } from "@/utils/formatPrice";
 import { Badge } from "../ui/badge";
 import {

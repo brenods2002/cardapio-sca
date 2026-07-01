@@ -11,11 +11,15 @@ import {
 import { formatarPreco } from "@/utils/formatPrice";
 import { Badge } from "../ui/badge";
 import { categorias } from "@/types/type";
-import type { Categorias } from "@/types/type";
+import type { Categorias, ProdutoSelecionado } from "@/types/type";
 import { useCardapioModal } from "@/hooks/useCardapioModel";
 import { ModalItemCardapio } from "../ModalItemCardapio";
 
-export function MenuItems() {
+interface MenuItemProps {
+  adicionarPedido: (produto: ProdutoSelecionado) => void;
+}
+
+export function MenuItems({ adicionarPedido }: MenuItemProps) {
   const {
     produtoModal,
     quantidade,
@@ -27,10 +31,6 @@ export function MenuItems() {
     decrementar,
     confirmarSelecao,
   } = useCardapioModal();
-
-  function adicionarAoCarrinho() {
-    console.log("Adicionado ao carrinho", produtos);
-  }
 
   const [categoriaSelecionada, setCategoriaSelecionada] =
     useState<Categorias>("Todos");
@@ -59,7 +59,10 @@ export function MenuItems() {
 
       <div className="grid grid-cols-2 gap-3 sm:grid-cols-4 items-stretch">
         {produtosFiltrados.map((produto) => (
-          <Card className="overflow-hidden h-full flex flex-col">
+          <Card
+            key={produto.id}
+            className="overflow-hidden h-full flex flex-col"
+          >
             <div className="aspect-video px-2 w-full overflow-hidden">
               <img
                 src={produto.imagem}
@@ -94,7 +97,7 @@ export function MenuItems() {
           onDecrementar={decrementar}
           onObservacaoChange={setObservacao}
           onFechar={fecharModal}
-          onConfirmar={() => confirmarSelecao(adicionarAoCarrinho)}
+          onConfirmar={() => confirmarSelecao(adicionarPedido)}
         />
       </div>
     </div>

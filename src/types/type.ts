@@ -23,3 +23,8 @@ export interface Produtos {
   categoria: Categorias;
   imagem: string;
 }
+
+export interface ProdutoSelecionado extends Produtos {
+  quantidade: number;
+  observacao: string;
+}
