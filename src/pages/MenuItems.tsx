@@ -1,8 +1,6 @@
 import { useState } from "react";
 import { produtos } from "@/data/data";
-
 import { formatarPreco } from "@/utils/formatPrice";
-
 import { categorias } from "@/types";
 import type { Categorias, ProdutoSelecionado } from "@/types";
 import { useCardapioModal } from "@/hooks/useCardapioModel";
@@ -48,12 +46,12 @@ export function MenuItems({ adicionarPedido }: MenuItemProps) {
   return (
     <div className="max-w-5xl sm:max-w-full mx-auto px-2 space-y-4">
       <HeroSection />
-      <nav className="space-x-3 sm:justify-center flex overflow-x-scroll no-scrollbar py-4 px-2 border-b border-gray-300">
+      <nav className="space-x-3  flex overflow-x-scroll no-scrollbar py-4 px-2 border-b border-gray-300 sm:justify-center">
         {" "}
         {categorias.map((categoria) => (
           <Button
             key={categoria}
-            className={`p-4.5 ${categoriaSelecionada === categoria ? "bg-primary/70 text-white scale-[1.05]" : "bg-primary hover:bg-primary/90"}`}
+            className={`p-4.5 sm:p-6 sm:rounded-2xl sm:text-[16px] sm:font-bold ${categoriaSelecionada === categoria ? "bg-primary/70 text-white scale-[1.05]" : "bg-primary hover:bg-primary/90"}`}
             onClick={() => setCategoriaSelecionada(categoria)}
           >
             {categoria}

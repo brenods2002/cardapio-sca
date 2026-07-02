@@ -260,7 +260,7 @@ export function FinalizarPedido({
           </AlertDialogHeader>
           <AlertDialogFooter>
             <AlertDialogCancel>Cancelar</AlertDialogCancel>
-            <AlertDialogAction onClick={handleConfirmarPedido}>
+            <AlertDialogAction className="py-5" onClick={handleConfirmarPedido}>
               Confirmar
             </AlertDialogAction>
           </AlertDialogFooter>
