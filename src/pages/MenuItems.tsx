@@ -1,20 +1,22 @@
-import { Button } from "../ui/button";
 import { useState } from "react";
 import { produtos } from "@/data/data";
+
+import { formatarPreco } from "@/utils/formatPrice";
+
+import { categorias } from "@/types";
+import type { Categorias, ProdutoSelecionado } from "@/types";
+import { useCardapioModal } from "@/hooks/useCardapioModel";
+import { HeroSection } from "@/Components/HeroSection";
+import { Button } from "@/Components/ui/button";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "../ui/card";
-import { formatarPreco } from "@/utils/formatPrice";
-import { Badge } from "../ui/badge";
-import { categorias } from "@/types";
-import type { Categorias, ProdutoSelecionado } from "@/types";
-import { useCardapioModal } from "@/hooks/useCardapioModel";
-import { ModalItemCardapio } from "../ModalItemCardapio";
-import { HeroSection } from "../HeroSection";
+} from "@/Components/ui/card";
+import { Badge } from "@/Components/ui/badge";
+import { ModalItemCardapio } from "@/Components/ModalItemCardapio";
 
 interface MenuItemProps {
   adicionarPedido: (produto: ProdutoSelecionado) => void;
@@ -44,9 +46,9 @@ export function MenuItems({ adicionarPedido }: MenuItemProps) {
         );
 
   return (
-    <div className="max-w-5xl mx-auto px-2 space-y-4">
+    <div className="max-w-5xl sm:max-w-full mx-auto px-2 space-y-4">
       <HeroSection />
-      <nav className="space-x-3 flex overflow-x-scroll no-scrollbar py-4 px-2 border-b border-gray-300">
+      <nav className="space-x-3 sm:justify-center flex overflow-x-scroll no-scrollbar py-4 px-2 border-b border-gray-300">
         {" "}
         {categorias.map((categoria) => (
           <Button
@@ -59,11 +61,11 @@ export function MenuItems({ adicionarPedido }: MenuItemProps) {
         ))}
       </nav>
 
-      <div className="grid grid-cols-2 gap-3 sm:grid-cols-4 items-stretch">
+      <div className="grid grid-cols-2 gap-3 sm:gap-4 sm:grid-cols-3 md:grid-cols-4 items-stretch">
         {produtosFiltrados.map((produto) => (
           <Card
             key={produto.id}
-            className="overflow-hidden h-full flex flex-col"
+            className="overflow-hidden h-full sm:p-4 flex flex-col"
           >
             <div className="aspect-video px-2 w-full overflow-hidden">
               <img
@@ -73,8 +75,8 @@ export function MenuItems({ adicionarPedido }: MenuItemProps) {
               />
             </div>
             <CardHeader className="border-b border-gray-200 flex-1">
-              <CardTitle>{produto.nome}</CardTitle>
-              <CardDescription className=" p-1">
+              <CardTitle className="truncate">{produto.nome}</CardTitle>
+              <CardDescription className="line-clamp-2 p-1">
                 {produto.descricao}
               </CardDescription>
             </CardHeader>

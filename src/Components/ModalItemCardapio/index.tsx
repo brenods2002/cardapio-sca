@@ -60,14 +60,16 @@ export function ModalItemCardapio({
                 <Badge variant="outline" className="p-3 mt-2 font-bold text-md">
                   {formatarPreco(produto.preco)}
                 </Badge>
-                <div className="mt-4 space-y-1">
+                <div className="mt-4 space-y-1 flex-1 min-w-0">
                   <label className="block font-medium mb-1">Observação</label>
                   {/* Aplicado class para previnir quebra do elemento */}
                   <Textarea
                     value={observacao}
-                    onChange={(e) => onObservacaoChange(e.target.value)}
+                    onChange={(e) =>
+                      onObservacaoChange(e.target.value.slice(0, 150))
+                    }
                     placeholder="Ex: sem cebola, ponto da carne..."
-                    className="resize-none w-full wrap-break-word overflow-wrap-anywhere whitespace-pre-wrap"
+                    className="resize-none w-full field-sizing-fixed"
                     maxLength={150}
                     rows={3}
                   />

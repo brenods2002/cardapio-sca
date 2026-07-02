@@ -571,7 +571,8 @@ export const produtos: Produtos[] = [
     descricao: "X-Burger, batata frita pequena e Coca-Cola Lata 350ml.",
     preco: 39.9,
     categoria: "Combos",
-    imagem: "/images/combos/combo-x-burger.jpg",
+    imagem:
+      "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&q=80",
   },
   {
     id: 62,
@@ -580,7 +581,8 @@ export const produtos: Produtos[] = [
       "X-Salada, batata frita pequena e Guaraná Antarctica Lata 350ml.",
     preco: 42.9,
     categoria: "Combos",
-    imagem: "/images/combos/combo-x-salada.jpg",
+    imagem:
+      "https://images.unsplash.com/photo-1550317138-10000687a72b?w=400&q=80",
   },
   {
     id: 63,
@@ -588,7 +590,8 @@ export const produtos: Produtos[] = [
     descricao: "X-Egg, batata frita pequena e Coca-Cola Zero Lata 350ml.",
     preco: 43.9,
     categoria: "Combos",
-    imagem: "/images/combos/combo-x-egg.jpg",
+    imagem:
+      "https://images.unsplash.com/photo-1586190848861-99aa4a171e90?w=400&q=80",
   },
   {
     id: 64,
@@ -596,7 +599,8 @@ export const produtos: Produtos[] = [
     descricao: "X-Bacon, batata frita média e Coca-Cola Lata 350ml.",
     preco: 47.9,
     categoria: "Combos",
-    imagem: "/images/combos/combo-x-bacon.jpg",
+    imagem:
+      "https://images.unsplash.com/photo-1553979459-d2229ba7433b?w=400&q=80",
   },
   {
     id: 65,
@@ -604,7 +608,8 @@ export const produtos: Produtos[] = [
     descricao: "X-Calabresa, batata frita média e Pepsi Lata 350ml.",
     preco: 48.9,
     categoria: "Combos",
-    imagem: "/images/combos/combo-x-calabresa.jpg",
+    imagem:
+      "https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?w=400&q=80",
   },
   {
     id: 66,
@@ -612,7 +617,8 @@ export const produtos: Produtos[] = [
     descricao: "X-Frango, batata frita pequena e Fanta Laranja Lata 350ml.",
     preco: 46.9,
     categoria: "Combos",
-    imagem: "/images/combos/combo-x-frango.jpg",
+    imagem:
+      "https://images.unsplash.com/photo-1567234669003-dce7a7a88821?w=400&q=80",
   },
   {
     id: 67,
@@ -621,7 +627,8 @@ export const produtos: Produtos[] = [
       "X-Frango com Catupiry, batata frita média e Coca-Cola Lata 350ml.",
     preco: 49.9,
     categoria: "Combos",
-    imagem: "/images/combos/combo-x-frango-catupiry.jpg",
+    imagem:
+      "https://images.unsplash.com/photo-1561758033-d89a9ad46330?w=400&q=80",
   },
   {
     id: 68,
@@ -629,7 +636,8 @@ export const produtos: Produtos[] = [
     descricao: "X-Tudo, batata frita grande e Coca-Cola 600ml.",
     preco: 59.9,
     categoria: "Combos",
-    imagem: "/images/combos/combo-x-tudo.jpg",
+    imagem:
+      "https://images.unsplash.com/photo-1581276879432-15e50529f34b?w=400&q=80",
   },
   {
     id: 69,
@@ -637,7 +645,8 @@ export const produtos: Produtos[] = [
     descricao: "X-Duplo, batata frita média e Sprite Lata 350ml.",
     preco: 54.9,
     categoria: "Combos",
-    imagem: "/images/combos/combo-x-duplo.jpg",
+    imagem:
+      "https://images.unsplash.com/photo-1520072959219-c595dc870360?w=400&q=80",
   },
   {
     id: 70,
@@ -645,7 +654,8 @@ export const produtos: Produtos[] = [
     descricao: "X-Picanha, batata frita com cheddar e bacon e Coca-Cola 600ml.",
     preco: 69.9,
     categoria: "Combos",
-    imagem: "/images/combos/combo-x-picanha.jpg",
+    imagem:
+      "https://images.unsplash.com/photo-1608767221051-2b9d18f35282?w=400&q=80",
   },
   {
     id: 71,
@@ -654,7 +664,8 @@ export const produtos: Produtos[] = [
       "Cheese Bacon, batata frita média e Guaraná Antarctica Lata 350ml.",
     preco: 51.9,
     categoria: "Combos",
-    imagem: "/images/combos/combo-cheese-bacon.jpg",
+    imagem:
+      "https://images.unsplash.com/photo-1598679253544-2c97992403ea?w=400&q=80",
   },
   {
     id: 72,
@@ -662,7 +673,8 @@ export const produtos: Produtos[] = [
     descricao: "X-Filé, batata frita média e Coca-Cola Lata 350ml.",
     preco: 56.9,
     categoria: "Combos",
-    imagem: "/images/combos/combo-x-file.jpg",
+    imagem:
+      "https://images.unsplash.com/photo-1603064752734-4c48eff53d05?w=400&q=80",
   },
   {
     id: 73,
@@ -670,7 +682,8 @@ export const produtos: Produtos[] = [
     descricao: "2 X-Burgers, batata frita grande e Coca-Cola 2L.",
     preco: 89.9,
     categoria: "Combos",
-    imagem: "/images/combos/combo-familia.jpg",
+    imagem:
+      "https://images.unsplash.com/photo-1550547660-d9450f859349?w=400&q=80",
   },
   {
     id: 74,
@@ -678,7 +691,8 @@ export const produtos: Produtos[] = [
     descricao: "2 X-Saladas, batata frita grande e Guaraná Antarctica 2L.",
     preco: 82.9,
     categoria: "Combos",
-    imagem: "/images/combos/combo-casal.jpg",
+    imagem:
+      "https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=400&q=80",
   },
   {
     id: 75,
@@ -687,6 +701,7 @@ export const produtos: Produtos[] = [
       "X-Tudo, batata frita com cheddar e bacon, onion rings e Coca-Cola 600ml.",
     preco: 79.9,
     categoria: "Combos",
-    imagem: "/images/combos/combo-supremo.jpg",
+    imagem:
+      "https://images.unsplash.com/photo-1586816001966-79b736744398?w=400&q=80",
   },
 ];

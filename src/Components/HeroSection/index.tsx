@@ -1,6 +1,6 @@
 export function HeroSection() {
   return (
-    <div className="pt-22 px-2 py-4 bg-gray-100 border-b border-gray-200">
+    <div className="pt-22 px-2 py-4 sm:justify-center flex bg-gray-100 border-b border-gray-200">
       <div className="space-y-3 flex flex-col">
         <p className="text-muted-foreground font-bold text-xs uppercase">
           CARDÁPIO ONLINE
