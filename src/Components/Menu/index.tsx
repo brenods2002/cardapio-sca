@@ -14,6 +14,7 @@ import { categorias } from "@/types";
 import type { Categorias, ProdutoSelecionado } from "@/types";
 import { useCardapioModal } from "@/hooks/useCardapioModel";
 import { ModalItemCardapio } from "../ModalItemCardapio";
+import { HeroSection } from "../HeroSection";
 
 interface MenuItemProps {
   adicionarPedido: (produto: ProdutoSelecionado) => void;
@@ -44,6 +45,7 @@ export function MenuItems({ adicionarPedido }: MenuItemProps) {
 
   return (
     <div className="max-w-5xl mx-auto px-2 space-y-4">
+      <HeroSection />
       <nav className="space-x-3 flex overflow-x-scroll no-scrollbar py-4 px-2 border-b border-gray-300">
         {" "}
         {categorias.map((categoria) => (
@@ -83,6 +85,7 @@ export function MenuItems({ adicionarPedido }: MenuItemProps) {
               <Button
                 onClick={() => handleClickSelect(produto)}
                 variant="outline"
+                className="h-8"
               >
                 Selecionar
               </Button>

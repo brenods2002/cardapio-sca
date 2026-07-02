@@ -15,6 +15,7 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "../ui/alert-dialog";
+import { useNavigate } from "react-router-dom";
 
 interface ModalCarrinhoProps {
   open: boolean;
@@ -33,9 +34,10 @@ export function ModalCarrinho({
   onRemover,
   onLimpar,
 }: ModalCarrinhoProps) {
+  const navigate = useNavigate();
+
   function handleFinalizar() {
-    alert("Pedido finalizado");
-    onLimpar();
+    navigate("/finalizar");
     onFechar();
   }
 
