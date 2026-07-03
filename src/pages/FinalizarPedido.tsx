@@ -159,14 +159,14 @@ export function FinalizarPedido({
           <p className="font-semibold">Delivery?</p>
           <div className="flex gap-2">
             <Button
-              size="sm"
+              size="lg"
               variant={form.delivery ? "default" : "outline"}
               onClick={() => atualizar("delivery", true)}
             >
               Sim
             </Button>
             <Button
-              size="sm"
+              size="lg"
               variant={!form.delivery ? "default" : "outline"}
               onClick={() => atualizar("delivery", false)}
             >

@@ -112,7 +112,10 @@ export function ModalCarrinho({
                 </span>
               </div>
 
-              <Button onClick={handleFinalizar} className="w-full h-11">
+              <Button
+                onClick={handleFinalizar}
+                className="w-full font-bold h-11"
+              >
                 Finalizar Pedido
               </Button>
 
