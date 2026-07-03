@@ -56,9 +56,9 @@ export function Header({
           <Button
             onClick={() => setmMdalCarrinhoAberto(true)}
             aria-label={`Ver meu pedido, } itens`}
-            className="flex gap-2 bg-primary hover:bg-primary/90 text-primary-foreground font-semibold text-sm rounded-full py-2 px-3 transition-colors sm:py-5 sm:px-5"
+            className="flex gap-2 bg-primary hover:bg-primary/90 text-muted font-semibold text-sm rounded-full py-2 px-3 transition-colors sm:py-4.5 sm:px-5"
           >
-            <ShoppingCart size={18} aria-hidden />
+            <ShoppingCart />
             Meu pedido
             <Badge className="bg-destructive cursor-pointer text-muted text-xs font-bold rounded-full px-2 py-0.5 leading-none">
               {totalPedido}
