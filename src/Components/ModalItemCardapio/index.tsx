@@ -38,7 +38,7 @@ export function ModalItemCardapio({
   return (
     <Dialog open={!!produto} onOpenChange={(open) => !open && onFechar()}>
       <DialogContent
-        className="w-full sm-max-w-md rounded-xl overflow-hidden p-4"
+        className="w-full sm:max-w-md rounded-xl overflow-hidden p-4"
         onClick={(e) => e.stopPropagation()}
       >
         {produto && (
@@ -57,12 +57,14 @@ export function ModalItemCardapio({
                   <DialogDescription>{produto?.descricao}</DialogDescription>
                 </DialogHeader>
 
-                <Badge variant="outline" className="p-3 mt-2 font-bold text-md">
+                <Badge
+                  variant="outline"
+                  className="p-3 mt-2 font-bold text-md shadow-2xl"
+                >
                   {formatarPreco(produto.preco)}
                 </Badge>
                 <div className="mt-4 space-y-1 flex-1 min-w-0">
                   <label className="block font-medium mb-1">Observação</label>
-                  {/* Aplicado class para previnir quebra do elemento */}
                   <Textarea
                     value={observacao}
                     onChange={(e) =>

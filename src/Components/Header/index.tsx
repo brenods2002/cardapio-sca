@@ -33,11 +33,11 @@ export function Header({
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 z-50 flex py-3 px-2 bg-white border-b border-gray-200 items-center justify-between sm:py-5">
+      <header className="fixed top-0 left-0 right-0 z-50 flex py-3 px-2 bg-white border-b border-gray-200 items-center justify-between sm:py-">
         <div className="flex items-center gap-2">
           {mostrarBotao && (
             <Button
-              variant="ghost"
+              variant="outline"
               onClick={handleVoltar}
               aria-label="Voltar para o cardápio"
             >
@@ -46,7 +46,7 @@ export function Header({
           )}
 
           <div className="bg-primary rounded-lg p-2 flex">
-            <UtensilsCrossed className="text-secondary fill sm:w-10 sm:h-10" />
+            <UtensilsCrossed className="text-secondary fill sm:w-8 sm:h-8" />
           </div>
           <h2 className="font-bold text-primary text-2xl sm:text-3xl">
             Lá Cantineta

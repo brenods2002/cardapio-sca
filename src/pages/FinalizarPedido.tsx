@@ -24,20 +24,12 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
 } from "@/Components/ui/alert-dialog";
+import { useFinalizarPedidoForm } from "@/hooks/useFinalizarPedidoForm";
 
 interface FinalizarPedidoProps {
   produtos: ProdutoSelecionado[];
   totalPreco: number;
   onLimpar: () => void;
-}
-
-interface FormData {
-  nome: string;
-  telefone: string;
-  observacao: string;
-  delivery: boolean;
-  endereco: string;
-  formaPagamento: string;
 }
 
 export function FinalizarPedido({
@@ -46,39 +38,19 @@ export function FinalizarPedido({
   onLimpar,
 }: FinalizarPedidoProps) {
   const navigate = useNavigate();
-
-  const [form, setForm] = useState<FormData>({
-    nome: "",
-    telefone: "",
-    observacao: "",
-    delivery: false,
-    endereco: "",
-    formaPagamento: "",
-  });
-
-  const [erros, setErros] = useState<Partial<Record<keyof FormData, string>>>(
-    {},
-  );
+  const { form, erros, atualizar, validar } = useFinalizarPedidoForm();
 
   const [dialogAberto, setDialogAberto] = useState(false);
 
-  function atualizar(campo: keyof FormData, valor: string | boolean) {
-    setForm((prev) => ({ ...prev, [campo]: valor }));
-    setErros((prev) => ({ ...prev, [campo]: "" }));
-  }
+  function formatarTelefone(value: string) {
+    const digits = value.replace(/\D/g, "").slice(0, 11); // só números, máx 11 dígitos
 
-  function validar() {
-    const novosErros: Partial<Record<keyof FormData, string>> = {};
-
-    if (!form.nome.trim()) novosErros.nome = "Nome é obrigatório";
-    if (!form.telefone.trim()) novosErros.telefone = "Telefone é obrigatório";
-    if (form.delivery && !form.formaPagamento)
-      novosErros.formaPagamento = "Selecione a forma de pagamento";
-    if (form.delivery && !form.endereco.trim())
-      novosErros.endereco = "Endereço é obrigatório para delivery";
-
-    setErros(novosErros);
-    return Object.keys(novosErros).length === 0;
+    if (digits.length <= 2) return digits;
+    if (digits.length <= 6) return `(${digits.slice(0, 2)}) ${digits.slice(2)}`;
+    if (digits.length <= 10) {
+      return `(${digits.slice(0, 2)}) ${digits.slice(2, 6)}-${digits.slice(6)}`;
+    }
+    return `(${digits.slice(0, 2)}) ${digits.slice(2, 7)}-${digits.slice(7)}`;
   }
 
   function handleEnviar() {
@@ -159,7 +131,9 @@ export function FinalizarPedido({
             id="telefone"
             placeholder="(00) 00000-0000"
             value={form.telefone}
-            onChange={(e) => atualizar("telefone", e.target.value)}
+            onChange={(e) =>
+              atualizar("telefone", formatarTelefone(e.target.value))
+            }
           />
           {erros.telefone && (
             <p className="text-xs text-destructive">{erros.telefone}</p>
@@ -254,8 +228,8 @@ export function FinalizarPedido({
               Você deseja confirmar a finalização do seu pedido?
             </AlertDialogTitle>
             <AlertDialogDescription>
-              Ao confirmar você será direcionado ao Whatsapp para finalizar e
-              confirmar seu pedido.
+              Ao confirmar seu pedido será enviado automaticamente para o
+              estabelecimento.
             </AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter>

@@ -115,7 +115,7 @@ export const produtos: Produtos[] = [
     preco: 59.9,
     categoria: "Pizzas",
     imagem:
-      "https://images.unsplash.com/photo-1567190872003-1b5f43f3c21e?w=400&q=80",
+      "https://plus.unsplash.com/premium_photo-1673439304183-8840bd0dc1bf?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     id: 13,
@@ -224,7 +224,7 @@ export const produtos: Produtos[] = [
     preco: 39.9,
     categoria: "Lanches",
     imagem:
-      "https://images.unsplash.com/photo-1581276879432-15e50529f34b?w=400&q=80",
+      "https://plus.unsplash.com/premium_photo-1675252369719-dd52bc69c3df?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     id: 24,
@@ -254,7 +254,7 @@ export const produtos: Produtos[] = [
     preco: 42.9,
     categoria: "Lanches",
     imagem:
-      "https://images.unsplash.com/photo-1608767221051-2b9d18f35282?w=400&q=80",
+      "https://plus.unsplash.com/premium_photo-1695762436915-748d5086214b?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     id: 27,
@@ -318,7 +318,7 @@ export const produtos: Produtos[] = [
     preco: 15.9,
     categoria: "Bebidas",
     imagem:
-      "https://images.unsplash.com/photo-1561758033-7e924d4e0a0b?w=400&q=80",
+      "https://plus.unsplash.com/premium_photo-1725075086631-b21a5642918b?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     id: 34,
@@ -327,7 +327,7 @@ export const produtos: Produtos[] = [
     preco: 6.5,
     categoria: "Bebidas",
     imagem:
-      "https://images.unsplash.com/photo-1625772299848-391b6a87d7b3?w=400&q=80",
+      "https://images.unsplash.com/photo-1543253687-c931c8e01820?q=80&w=765&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     id: 35,
@@ -336,7 +336,7 @@ export const produtos: Produtos[] = [
     preco: 6.0,
     categoria: "Bebidas",
     imagem:
-      "https://images.unsplash.com/photo-1567103472667-6898f3a79cf2?w=400&q=80",
+      "https://images.unsplash.com/photo-1598038990523-32bcaa29f679?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     id: 36,
@@ -345,7 +345,7 @@ export const produtos: Produtos[] = [
     preco: 14.9,
     categoria: "Bebidas",
     imagem:
-      "https://images.unsplash.com/photo-1581098365948-6a5a912a7a8a?w=400&q=80",
+      "https://plus.unsplash.com/premium_photo-1664305046686-8fb0b095617e?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     id: 37,
@@ -363,7 +363,7 @@ export const produtos: Produtos[] = [
     preco: 6.0,
     categoria: "Bebidas",
     imagem:
-      "https://images.unsplash.com/photo-1596803244618-8dea11c9b891?w=400&q=80",
+      "https://images.unsplash.com/photo-1739990789992-77ef676cb709?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     id: 39,
@@ -399,7 +399,7 @@ export const produtos: Produtos[] = [
     preco: 4.0,
     categoria: "Bebidas",
     imagem:
-      "https://images.unsplash.com/photo-1605731678592-e3e1c3ad3421?w=400&q=80",
+      "https://images.unsplash.com/photo-1616118132534-381148898bb4?q=80&w=764&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     id: 43,
@@ -471,7 +471,7 @@ export const produtos: Produtos[] = [
     preco: 39.9,
     categoria: "Porções",
     imagem:
-      "https://images.unsplash.com/photo-1619881585557-6f8a4af7c4bf?w=400&q=80",
+      "https://plus.unsplash.com/premium_photo-1683121324474-83460636b0ed?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     id: 51,
@@ -637,7 +637,7 @@ export const produtos: Produtos[] = [
     preco: 59.9,
     categoria: "Combos",
     imagem:
-      "https://images.unsplash.com/photo-1581276879432-15e50529f34b?w=400&q=80",
+      "https://plus.unsplash.com/premium_photo-1675252369719-dd52bc69c3df?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     id: 69,
@@ -655,7 +655,7 @@ export const produtos: Produtos[] = [
     preco: 69.9,
     categoria: "Combos",
     imagem:
-      "https://images.unsplash.com/photo-1608767221051-2b9d18f35282?w=400&q=80",
+      "https://plus.unsplash.com/premium_photo-1695762436915-748d5086214b?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     id: 71,
