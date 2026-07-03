@@ -17,7 +17,7 @@ export function NavCategorias({
       {categorias.map((categoria) => (
         <Button
           key={categoria}
-          className={`p-4 w-24 sm:rounded-2xl sm:text-[16px] sm:p-6 sm:font-bold ${categoriaSelecionada === categoria ? "bg-primary/70 text-white scale-[1.05]" : "bg-primary hover:bg-primary/90"}`}
+          className={`p-4 w-24 sm:rounded-2xl sm:text-[16px] sm:p-6 sm:font-bold transition duration-300 ease-in-out  ${categoriaSelecionada === categoria ? "bg-amber-500 hover:bg-amber-600 text-white scale-[1.05]" : "bg-primary hover:-translate-y-1 hover:bg-primary/90"}`}
           onClick={() => onSelecionarCategoria(categoria)}
         >
           {categoria}

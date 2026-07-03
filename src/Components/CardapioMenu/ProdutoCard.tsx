@@ -17,7 +17,7 @@ interface ProdutoCardProps {
 
 export function ProdutoCard({ produto, onSelecionar }: ProdutoCardProps) {
   return (
-    <Card className="overflow-hidden h-full sm:p-4 flex flex-col">
+    <Card className="overflow-hidden h-full sm:p-4 flex flex-col hover:scale-[1.01] transition-all duration-300">
       <div className="aspect-video px-2 w-full overflow-hidden">
         <img
           src={produto.imagem}
@@ -32,12 +32,11 @@ export function ProdutoCard({ produto, onSelecionar }: ProdutoCardProps) {
         </CardDescription>
       </CardHeader>
       <CardContent className="flex items-center justify-between">
-        <Badge className="text-md font-bold sm:p-3">
+        <Badge className="text-md font-bold sm:p-3" variant="outline">
           {formatarPreco(produto.preco)}
         </Badge>
         <Button
           onClick={() => onSelecionar(produto)}
-          variant="outline"
           className="h-8 sm:h-0 sm:p-4 shadow-2xl"
         >
           Selecionar
