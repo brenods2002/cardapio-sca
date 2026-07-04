@@ -129,7 +129,6 @@ export function FinalizarPedido({
           <Label htmlFor="telefone">Telefone</Label>
           <Input
             id="telefone"
-            type="number"
             placeholder="(00) 00000-0000"
             value={form.telefone}
             onChange={(e) =>
